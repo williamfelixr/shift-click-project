@@ -1,0 +1,59 @@
+:root {
+    --blue: #1c2199;
+    --white: #ece7de;
+    --red: #ff3c3c;
+    --home-font: monospace;
+}
+
+body {
+    font-family: var(--home-font);
+    background: var(--blue);
+    color: var(--white);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--red);
+    text-decoration: italic;
+}
+
+ul {
+    list-style-position: outside;
+    list-style-type: circle;
+}
+
+li:hover {
+    color: var(--red);
+    text-decoration: italic;  
+}
+
+a:visited {
+    color: var(--white);
+}
+
+#slide {
+    height: 30vh;
+    width: 30vh;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--white);
+}
+
+button {
+    font-family: var(--home-font);
+    color: var(--white);
+    background-color: var(--blue);
+    border: 2px solid var(--white);
+    padding: 10px;
+    width: 14vh;
+    border-radius: 0px;
+}
+
+button:hover {
+    color: var(--blue);
+    background-color: var(--white);
+    border-color: var(--blue);
+}
