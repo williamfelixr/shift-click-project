@@ -17,9 +17,17 @@ var imgArray = ["media/bridge.jpg", "media/dog.jpg", "media/grass.jpg", "media/l
           x = imgArray.length - 1;
         } else {
           x--
-        }
+        } // x decreases by 1 each time function is called, returning to highest index after reaching zero
 
         image.src = imgArray[x]
       }
 
+    document.addEventListener("keydown", function(event){
+      if (event.key == "ArrowLeft") {
+        previousImage();
+      } else if (event.key =="ArrowRight") {
+        nextImage();
+      }
+
+    })
 
