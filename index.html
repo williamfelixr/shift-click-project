@@ -3,29 +3,27 @@
   <head>
     <title>Shift Click Project</title> 
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
  
   <body> 
-    <h1>Will Robinson's Shift Click Project</h1> 
+    <div class="container">
+      <div id="left-panel">
+      <h1>Will Robinson's Shift Click Project</h1> 
 
-    <p id="personal-statement">
-      this<br>
-      will<br>
-      be<br>
-      my<br>
-      personal<br>
-      statement!
-    </p>
+      <p id="personal-statement">
+       this will be my personal statement! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laboriosam asperiores magni harum quibusdam ut quae architecto dicta amet sunt beatae excepturi quis esse voluptatibus, est quo repudiandae aperiam voluptas.
+      </p>
 
-    <ul id="link-list">
+      <ul id="link-list">
         <li><a href="http://github.com">this will be a GitHub link</a></li>
         <li><a href="http://freecodecamp.com">this will be an FFC link</a></li>
         <li><a href="http://codewars.com">this will be a Codewars link</a></li>
-    </ul>
-    
-    <div id="image-carousel">
+      </ul>
+      </div>
+      <div id="right-panel">
+        <div id="image-carousel">
 
         <!-- <h1>image carousel goes here</h1>
 
@@ -38,13 +36,17 @@
             <li>is written by you, no internet copy-paste please!</li>
         </ul> -->
         <img src="media/bridge.jpg" id="slide">
-        
-
+  
+        </div>
+        <div id="button-div">
+          <button onclick="previousImage()"><-</button> 
+          <button onclick="nextImage()">-></button>
+        </div>  
+      </div>
     </div>
-    <button onclick="previousImage()">previous</button> 
-    <button onclick="nextImage()">next</button>
-    <script src="script.js">
-      
-    </script>
+    
+
+
+    <script src="script.js"></script>
   </body>
 </html>
