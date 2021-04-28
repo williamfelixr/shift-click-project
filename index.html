@@ -2,27 +2,36 @@
 <html> 
   <head>
     <title>Shift Click Project</title> 
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" type="text/css" href="grid.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </head>
  
   <body> 
     <div class="container">
+
+
       <div id="left-panel">
-      <h1>Will Robinson's Shift Click Project</h1> 
 
-      <p id="personal-statement">
-       this will be my personal statement! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laboriosam asperiores magni harum quibusdam ut quae architecto dicta amet sunt beatae excepturi quis esse voluptatibus, est quo repudiandae aperiam voluptas.
-      </p>
+        <img id="profile-pic">
 
-      <ul id="link-list">
-        <li><a href="http://github.com">this will be a GitHub link</a></li>
-        <li><a href="http://freecodecamp.com">this will be an FFC link</a></li>
-        <li><a href="http://codewars.com">this will be a Codewars link</a></li>
-      </ul>
+        <p id="header">williamfelixr</p>
+        
+        <p id="personal-statement">
+          this will be my personal statement! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laboriosam asperiores magni harum quibusdam ut quae architecto dicta amet sunt beatae excepturi quis esse voluptatibus, est quo repudiandae aperiam voluptas.
+        </p>
+
+        <ul id="link-list">
+          <li><a href="https://github.com/williamfelixr" target="_blank">github</a></li>
+          <li><a href="https://www.freecodecamp.org/williamf-r" target="_blank">freecodecamp</a></li>
+          <li><a href="https://www.codewars.com/users/williamf-r" target="_blank">codewars</a></li>
+        </ul>
+
       </div>
+
+
       <div id="right-panel">
+
         <div id="image-carousel">
 
         <!-- <h1>image carousel goes here</h1>
@@ -36,12 +45,14 @@
             <li>is written by you, no internet copy-paste please!</li>
         </ul> -->
         <img src="media/bridge.jpg" id="slide">
-  
         </div>
+
         <div id="button-div">
-          <button onclick="previousImage()"><-</button> 
+          <button onclick="previousImage()"><-</button>
+          <div id="image-counter"></div>
           <button onclick="nextImage()">-></button>
         </div>  
+
       </div>
     </div>
     
