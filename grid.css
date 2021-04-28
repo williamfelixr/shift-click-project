@@ -1,0 +1,117 @@
+:root {
+    --blue: #010a58;
+    --white: #ece7de;
+    --red: #ff3c3c;
+    --home-font: times;
+} /* for easy(ish) colour and font changing */
+
+html {
+    height: 100%;
+} /* body margins are 0 so page fits to browser window area */
+
+* {
+    color: var(--fontColor);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    margin: 0 0;
+    height: 100%;
+    background: var(--blue);
+    color: var(--white);
+} /* stretch body element to fit html parent */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+} /* define basic 2-column grid layout */
+
+#right-panel {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid var(--white);
+} /* image and button wrapper aligned and centered in right hand panel 
+     right hand panel set to height 100% to constrain child image */
+
+#left-panel {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: left;
+    justify-content: center;
+    padding: 5vh 2vw 3vh 2vw;
+} /* pad the left panel for text formatting */
+
+p #header {
+    padding: 0;
+}
+
+#link-list{
+    margin: default 0 0 0;
+    padding: 0;
+}
+
+#slide {
+    height: 70vh;
+    width: 50vh;
+    margin: 5vh 5vw;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--white);
+} /* frames, crops and centers image in box of fixed dimensions (relative 
+     to container) meaning fixed aspect ratio! apparently this is hard to 
+     do! */
+
+
+
+
+
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: var(--white);
+}
+a:hover {
+    color: var(--red);
+    font-style: italic;
+}
+ul {
+    list-style-position: outside;
+    list-style-type: none;
+}
+
+#button-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    position: relative;
+    align-items: center
+}
+
+button {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: var(--home-font);
+    color: var(--white);
+    background-color: var(--blue);
+    border: 2px solid var(--white);
+    padding: 10px 10px;
+    border-radius: 0px;
+}
+
+#image-counter {
+    text-align: center;
+}
+
+button:hover {
+    color: var(--red);
+    background-color: var(--white);
+    border-color: var(--blue);
+    transition-duration: 0.3s;
+}
