@@ -158,6 +158,10 @@ button:hover {
         align-self: center;
         text-align: justify;
     }   
+
+    #slide {
+        height: 70vh;
+        width: 75vw;
 }
 
 @media (min-width: 800px) {
