@@ -25,13 +25,15 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 100%;
+    align-items: center;
+
 } /* define basic 2-column grid layout */
 
 #right-panel {
     display: flex;
     flex-direction: column;
     width: 75vw;
-    height: 100%;
+    height: 95%;
     align-items: center;
     justify-content: center;
     border-left: 1px solid var(--white);
@@ -51,8 +53,13 @@ p #header {
     padding: 0;
 }
 
+#ps-button {
+    display: none;
+}
+
 #personal-statement {
     font-size: 0.9em;
+    display: block;
 }
 
 #link-list{
@@ -91,6 +98,9 @@ ul {
     list-style-type: none;
 }
 
+
+
+
 #button-div {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
@@ -118,4 +128,40 @@ button:hover {
     background-color: var(--white);
     border-color: var(--blue);
     transition-duration: 0.3s;
+}
+
+@media (max-width: 800px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    #right-panel {
+        border-left: none;
+        border-top: 1px solid var(--white);
+        width: 95%
+    }
+
+    #left-panel {
+        text-align: center;
+    } 
+
+    #ps-button {
+        display: block;
+    }
+
+    #personal-statement {
+        display: none;
+        height: 90%;
+        width: 90%;
+        align-self: center;
+        text-align: justify;
+    }   
+}
+
+@media (min-width: 800px) {
+    #personal-statement {
+        display: block;
+    }
 }
