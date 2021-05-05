@@ -36,21 +36,26 @@ body {
     height: 95%;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid var(--white);
+    
+    position: fixed;
+    right: 0;
 } /* image and button wrapper aligned and centered in right hand panel 
      right hand panel set to height 100% to constrain child image */
 
 #left-panel {
     display: flex;
     flex-direction: column;
+    width: 25vw;
+    height: 95%;
     text-align: left;
-    align-items: left;
     justify-content: center;
     padding: 1vh 1vw 1vh 1vw;
+    border-right: 1px solid var(--white);
 } /* pad the left panel for text formatting */
 
-p #header {
+h1 {
     padding: 0;
+    font-size: 1em;
 }
 
 #ps-button {
@@ -58,7 +63,7 @@ p #header {
 }
 
 #personal-statement {
-    font-size: 0.9em;
+    font-size: 0.8em;
     display: block;
 }
 
@@ -73,33 +78,38 @@ p #header {
     margin: 5vh 5vw;
     object-fit: cover;
     object-position: center;
-    border: 2px solid var(--white);
-} /* frames, crops and centers image in box of fixed dimensions (relative 
-     to container) meaning fixed aspect ratio! apparently this is hard to 
-     do! */
-
-
-
-
-
+    border: 1px solid var(--white);
+} 
 
 a {
     text-decoration: none;
+    font-style: italic;
 }
 a:visited {
     color: var(--white);
 }
 a:hover {
     color: var(--red);
-    font-style: italic;
+    font-style: normal;
 }
+
+.link-div {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    font-size: 0.7em;
+    align-items: center
+}
+
+.link {
+    padding: 10px;
+}
+
 ul {
     list-style-position: outside;
     list-style-type: none;
+    font-size: 0.7em;
+    width: auto;
 }
-
-
-
 
 #button-div {
     display: grid;
@@ -113,7 +123,7 @@ button {
     margin-right: 10px;
     font-family: var(--home-font);
     color: var(--white);
-    background-color: var(--blue);
+    background-color: transparent;
     border: 2px solid var(--white);
     padding: 10px 10px;
     border-radius: 0px;
@@ -138,13 +148,19 @@ button:hover {
     }
 
     #right-panel {
-        border-left: none;
-        border-top: 1px solid var(--white);
-        width: 95%
+        position: relative; 
+        height: auto; 
+    }
+
+    #button-div {
+        margin-bottom: 5vh;
     }
 
     #left-panel {
         text-align: center;
+        border-right: none;
+        border-bottom: 1px solid var(--white);
+        width: 95%;
     } 
 
     #ps-button {
@@ -159,13 +175,28 @@ button:hover {
         text-align: justify;
     }   
 
+
     #slide {
-        height: 70vh;
-        width: 75vw;
+        height: 55vh;
+        width: 60vw;
+    }
 }
 
-@media (min-width: 800px) {
+@media (max-width: 1000px) {
     #personal-statement {
-        display: block;
+        font-size: 0.7em;
     }
+}
+
+#clock {
+    padding: 0 1vw 2vh 1vw;
+    margin-left: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: none;
+}
+#clock:hover {
+    background-color: transparent;
+    font-style: italic;
 }
