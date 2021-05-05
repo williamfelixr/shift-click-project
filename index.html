@@ -16,19 +16,46 @@
 
         <img id="profile-pic">
 
-        <p id="header">williamfelixr</p>
+        <h1>william felix robinson</h1>
         
         <button id="ps-button" onclick="togglePS()">about</button>
 
-        <p id="personal-statement">
-          this will be my personal statement! Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore laboriosam asperiores magni harum quibusdam ut quae architecto dicta amet sunt beatae excepturi quis esse voluptatibus, est quo repudiandae aperiam voluptas.
-        </p>
+        <div id="personal-statement">
+          <p>
+            I enjoy making things that work well and look good. This in mind, 
+            it was only a matter of time before I started learning to code. After a few 
+            toe-dips in the coding waters over the past 4 years since I left university, 
+            I finally took the plunge with some reading and research in late 2020. While 
+            looking for resources to help me learn the basics I found Shift-Click!
+          </p>
 
-        <ul id="link-list">
+          <p>
+            Since taking part in the Shift-Click programme, I feel 100x more confident about 
+            that all-important “making a start” on tackling daunting tasks both in the silicon 
+            world and the carbon one. As of now, my plan is to apply for the Full Stack course, 
+            keep honing my skills, build up my portfolio and continue researching my next career 
+            move.
+          </p>
+          
+          <p>
+            Some ideas I have for future projects: a  
+            <a href="https://en.wikipedia.org/wiki/Cellular_automaton" target="_blank">cellular automaton</a> 
+            generator game, metronome, and adding functionality to that clock in the bottom right corner - all 
+            with a focus on being intelligible and easy to use.
+          </p>
+
+          <p>
+            In my spare time I like to draw, cook, walk the dog and make music 
+            (including an <a href="https://www.fact.co.uk/artwork/methuselah" target="_blank">
+            ongoing collaboration with experience designer and game developer Elle Bulger</a>.)
+          </p>
+        </div>
+        
+        <ul id="link-list"> 
           <li><a href="https://github.com/williamfelixr" target="_blank">github</a></li>
           <li><a href="https://www.freecodecamp.org/williamf-r" target="_blank">freecodecamp</a></li>
           <li><a href="https://www.codewars.com/users/williamf-r" target="_blank">codewars</a></li>
-        </ul>
+          </ul>
 
       </div>
 
@@ -51,13 +78,14 @@
         </div>
 
         <div id="button-div">
-          <button onclick="previousImage()"><-</button>
+          <button onclick="previousImage()">&larr;</button>
           <div id="image-counter"></div>
-          <button onclick="nextImage()">-></button>
+          <button onclick="nextImage()">&rarr;</button>
         </div>  
 
       </div>
     </div>
+    <button id="clock">getting time...</button>
     
 
 
