@@ -1,24 +1,22 @@
 :root {
     --blue: #010a58;
-    --white: #ece7de;
+    --white: #fcf7ef;
     --red: #ff3c3c;
-    --home-font: monospace;
-} /* for easy(ish) colour and font changing */
+} /* for tweaking colour palette */
 
 html {
     height: 100%;
-} /* body margins are 0 so page fits to browser window area */
-
-* {
-    color: var(--fontColor);
     font-family: 'Source Code Pro', monospace, Georgia, 'Times New Roman', Times, serif;
-}
+    --fg-colour: var(--white);
+    --bg-colour: var(--blue);
+    --hover-colour: var(--red);
+} 
 
 body {
     margin: 0 0;
     height: 100%;
-    background: var(--blue);
-    color: var(--white);
+    background: var(--bg-colour);
+    color: var(--fg-colour);
 } /* stretch body element to fit html parent */
 
 .container {
@@ -26,7 +24,6 @@ body {
     grid-template-columns: 1fr 1fr;
     height: 100%;
     align-items: center;
-
 } /* define basic 2-column grid layout */
 
 #right-panel {
@@ -50,7 +47,7 @@ body {
     text-align: left;
     justify-content: center;
     padding: 1vh 1vw 1vh 1vw;
-    border-right: 1px solid var(--white);
+    border-right: 1px solid var(--fg-colour);
 } /* pad the left panel for text formatting */
 
 h1 {
@@ -78,7 +75,7 @@ h1 {
     margin: 5vh 5vw;
     object-fit: cover;
     object-position: center;
-    border: 1px solid var(--white);
+    border: 1px solid var(--fg-colour);
 } 
 
 a {
@@ -86,10 +83,10 @@ a {
     font-style: italic;
 }
 a:visited {
-    color: var(--white);
+    color: var(--fg-colour);
 }
 a:hover {
-    color: var(--red);
+    color: var(--hover-colour);
     font-style: normal;
 }
 
@@ -122,9 +119,9 @@ button {
     margin-left: 10px;
     margin-right: 10px;
     font-family: var(--home-font);
-    color: var(--white);
+    color: var(--fg-colour);
     background-color: transparent;
-    border: 2px solid var(--white);
+    border: 1px solid var(--fg-colour);
     padding: 10px 10px;
     border-radius: 0px;
 }
@@ -134,10 +131,14 @@ button {
 }
 
 button:hover {
-    color: var(--red);
-    background-color: var(--white);
-    border-color: var(--blue);
+    color: var(--hover-colour);
+    background-color: var(--fg-colour);
+    border-color: var(--bg-colour);
     transition-duration: 0.3s;
+}
+
+button:focus {
+    outline: none;
 }
 
 @media (max-width: 800px){
@@ -159,7 +160,7 @@ button:hover {
     #left-panel {
         text-align: center;
         border-right: none;
-        border-bottom: 1px solid var(--white);
+        border-bottom: 1px solid var(--fg-colour);
         width: 95%;
     } 
 
@@ -177,8 +178,8 @@ button:hover {
 
 
     #slide {
-        height: 45vh;
-        width: 75vw;
+        height: 55vh;
+        width: 70vw;
     }
 }
 

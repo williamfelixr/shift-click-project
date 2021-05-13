@@ -101,3 +101,18 @@ window.addEventListener("resize", function() {
     document.getElementById("personal-statement").style.display = "none";
   }
 }) 
+
+
+/*----------------------THEME SWITCHER----------------------*/
+var currentTheme = "dark";
+function toggleTheme() {
+  if (currentTheme == "dark") {
+    currentTheme = "light";
+    document.documentElement.style.setProperty('--fg-colour', 'var(--blue)');
+    document.documentElement.style.setProperty('--bg-colour', 'var(--white)');
+  } else if (currentTheme == "light") {
+    currentTheme = "dark";
+    document.documentElement.style.setProperty('--bg-colour', 'var(--blue)');
+    document.documentElement.style.setProperty('--fg-colour', 'var(--white)');
+  }
+}
